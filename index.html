@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Typewriter Effect</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #38bdf8;
+        }
+
+            #typewriter {
+            display: inline-flex;
+            align-items: baseline;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            color: #38bdf8;
+            white-space: pre-wrap; /* satır kırılabilir */
+        }
+
+        .cursor {
+            width: 2px;
+            height: 1em;              /* HARF KADAR */
+            background-color: #38bdf8;
+            margin-left: 4px;
+            animation: blink 1s steps(1) infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 0; }
+            25%, 75% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+<div id="typewriter">
+    <span id="text"></span>
+    <span class="cursor"></span>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
